@@ -1,8 +1,8 @@
 package com.mishadoff.randomorg;
 
 /**
- * Class generator provides methods
- * for generating random numbers via athmospheric
+ * Class-facade generator provides methods
+ * for generating randomness via athmospheric
  * noise. Read more at {@link www.random.org}
  * @author mishadoff
  *
