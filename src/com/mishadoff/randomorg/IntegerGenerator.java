@@ -2,7 +2,8 @@ package com.mishadoff.randomorg;
 
 
 /**
- * Integer generator part of random.org API
+ * Integer generator part of random.org API.
+ * Provides methods for random integer number generating.
  * @author mishadoff
  *
  */

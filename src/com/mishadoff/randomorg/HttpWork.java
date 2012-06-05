@@ -8,13 +8,15 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * Low level class that handles all http work
+ * Low level class-util that handles all http work
  * for obtaining results without third-party libs.
  * 
  * @author mishadoff
  *
  */
-public class HttpWork {
+public final class HttpWork {
+	
+	private HttpWork(){}
 	
 	/**
 	 * Retrieves content on provided url.
@@ -23,7 +25,7 @@ public class HttpWork {
 	 * @return BufferedReader
 	 * @throws IOException 
 	 */
-	public BufferedReader get(String urlString) throws IOException{
+	public static BufferedReader get(String urlString) throws IOException{
 		// TODO handle 503 response
 		HttpURLConnection connection;
 		BufferedReader rd;
@@ -35,8 +37,7 @@ public class HttpWork {
 	}
 	
 	public static void main(String[] args) throws MalformedURLException, IOException {
-		HttpWork httpWork = new HttpWork();
-		BufferedReader br = httpWork.get("http://random.org/quota/?format=plain");
+		BufferedReader br = get("http://random.org/quota/?format=plain");
 		String line;
 		while ((line = br.readLine()) != null){
 			System.out.println(line);
