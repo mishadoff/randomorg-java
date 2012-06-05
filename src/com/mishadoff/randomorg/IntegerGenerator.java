@@ -23,6 +23,14 @@ public class IntegerGenerator {
 	private final int BASE = 10;
 	private final int COLS = 1;
 	
+	/**
+	 * Generate <b>count</b> numbers between <b>min</b> and <b>max</b> inclusively.
+	 * @param min
+	 * @param max
+	 * @param count
+	 * @return list of generated numbers
+	 * @throws IOException
+	 */
 	public ArrayList<Integer> generate(int min, int max, int count) throws IOException {
 		String query = INTEGER_QUERY 
 						+ INT_MIN + min 

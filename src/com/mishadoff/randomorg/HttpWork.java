@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -15,6 +14,8 @@ import java.net.URL;
  *
  */
 public final class HttpWork {
+	
+	private static final String GET = "GET";
 	
 	private HttpWork(){}
 	
@@ -27,20 +28,13 @@ public final class HttpWork {
 	 */
 	public static BufferedReader get(String urlString) throws IOException{
 		// TODO handle 503 response
+		// TODO add timeout functionality
 		HttpURLConnection connection;
 		BufferedReader rd;
 		URL url = new URL(urlString);
 		connection = (HttpURLConnection) url.openConnection();
-		connection.setRequestMethod("GET");
+		connection.setRequestMethod(GET);
 		rd = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 		return rd;
-	}
-	
-	public static void main(String[] args) throws MalformedURLException, IOException {
-		BufferedReader br = get("http://random.org/quota/?format=plain");
-		String line;
-		while ((line = br.readLine()) != null){
-			System.out.println(line);
-		}
 	}
 }
