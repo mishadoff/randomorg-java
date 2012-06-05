@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class IntegerGenerator {
 	
-	private final String INTEGER_QUERY = "http://www.random.org/integers/?format=plain";
+	private final String INTEGER_QUERY = "http://random.org/integers/?format=plain";
 	private final String INT_MIN = "&min=";
 	private final String INT_MAX = "&max=";
 	private final String INT_NUM = "&num=";

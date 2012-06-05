@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class SequenceGenerator {
 
-	private final String SEQUENCE_QUERY = "http://www.random.org/sequences/?format=plain";
+	private final String SEQUENCE_QUERY = "http://random.org/sequences/?format=plain";
 	private final String SEQ_MIN = "&min=";
 	private final String SEQ_MAX = "&max=";
 	private final String SEQ_COL = "&col=";
