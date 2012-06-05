@@ -12,6 +12,7 @@ import java.io.IOException;
 public class QuotaChecker {
 
 	private final String QUOTA_QUERY = "http://random.org/quota/?format=plain";
+	private final String QUOTA_QUERY_IP = "&ip=";
 	
 	/**
 	 * Retrieves current remaining quota for requester IP
@@ -27,9 +28,10 @@ public class QuotaChecker {
 	 * Retrieves current remaining quota for specified IP
 	 * @param 
 	 * @return value in bits
+	 * @throws IOException 
 	 */
-	private long quota(String ip){
-		throw new UnsupportedOperationException(
-				"Not implemented yet");
+	public long quota(String ip) throws IOException{
+		BufferedReader br = HttpWork.get(QUOTA_QUERY + QUOTA_QUERY_IP + ip);
+		return Long.parseLong(br.readLine());
 	}
 }
