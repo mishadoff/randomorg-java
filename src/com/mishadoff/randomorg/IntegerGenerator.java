@@ -25,10 +25,12 @@ public class IntegerGenerator {
 	
 	/**
 	 * Generate <b>count</b> numbers between <b>min</b> and <b>max</b> inclusively.
+	 * Similar behavior to Arrays.shuffle().
+	 * 
 	 * @param min
 	 * @param max
 	 * @param count
-	 * @return list of generated numbers
+	 * @return list of numbers
 	 * @throws IOException
 	 */
 	public ArrayList<Integer> generate(int min, int max, int count) throws IOException {
