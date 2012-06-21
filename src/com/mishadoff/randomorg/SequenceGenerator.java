@@ -1,6 +1,5 @@
 package com.mishadoff.randomorg;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -27,11 +26,10 @@ public class SequenceGenerator {
 				+ SEQ_MIN + min 
 				+ SEQ_MAX + max
 				+ SEQ_COL + COLS;
-		BufferedReader br = HttpWork.get(query);
+		ArrayList<String> strings = HttpWork.get(query);
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
-		String line = "";
-		while ((line = br.readLine()) != null) {
-			numbers.add(Integer.parseInt(line));
+		for (String str : strings) {
+			numbers.add(Integer.parseInt(str));
 		}
 		return numbers;
 	}

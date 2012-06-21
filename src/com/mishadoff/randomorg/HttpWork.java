@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 /**
  * Low level class-util that handles all http work
@@ -26,15 +27,26 @@ public final class HttpWork {
 	 * @return BufferedReader
 	 * @throws IOException 
 	 */
-	public static BufferedReader get(String urlString) throws IOException{
+	public static ArrayList<String> get(String urlString) throws IOException{
 		// TODO handle 503 response
 		// TODO add timeout functionality
 		HttpURLConnection connection;
-		BufferedReader rd;
-		URL url = new URL(urlString);
-		connection = (HttpURLConnection) url.openConnection();
-		connection.setRequestMethod(GET);
-		rd = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-		return rd;
+		BufferedReader rd = null;
+		ArrayList<String> strings = new ArrayList<String>();
+		try {
+			URL url = new URL(urlString);
+			connection = (HttpURLConnection) url.openConnection();
+			connection.setRequestMethod(GET);
+			rd = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+				String line = "";
+				while ((line = rd.readLine()) != null) {
+					strings.add(line);
+				}
+		} finally {
+			if (rd != null) {
+				rd.close();
+			}
+		}
+		return strings;
 	}
 }

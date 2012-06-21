@@ -1,7 +1,7 @@
 package com.mishadoff.randomorg;
 
-import java.io.BufferedReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Quota checker part of random.org API.
@@ -20,8 +20,8 @@ public class QuotaChecker {
 	 * @throws IOException 
 	 */
 	public long quota() throws IOException {
-		BufferedReader br = HttpWork.get(QUOTA_QUERY);
-		return Long.parseLong(br.readLine());
+		ArrayList<String> strings = HttpWork.get(QUOTA_QUERY);
+		return Long.parseLong(strings.get(0));
 	}
 	
 	/**
@@ -31,7 +31,7 @@ public class QuotaChecker {
 	 * @throws IOException 
 	 */
 	public long quota(String ip) throws IOException{
-		BufferedReader br = HttpWork.get(QUOTA_QUERY + QUOTA_QUERY_IP + ip);
-		return Long.parseLong(br.readLine());
+		ArrayList<String> strings = HttpWork.get(QUOTA_QUERY + QUOTA_QUERY_IP + ip);
+		return Long.parseLong(strings.get(0));
 	}
 }

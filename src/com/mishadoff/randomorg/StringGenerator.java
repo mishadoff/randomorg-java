@@ -1,6 +1,5 @@
 package com.mishadoff.randomorg;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -40,13 +39,7 @@ public class StringGenerator {
 				+ STR_UPPER + bts(withUpper)
 				+ STR_LOWER + bts(withLower)
 				+ STR_UNIQUE + bts(unique);
-		BufferedReader br = HttpWork.get(query);
-		String line = "";
-		ArrayList<String> strings = new ArrayList<String>();
-		while ((line = br.readLine()) != null) {
-			strings.add(line);
-		}
-		return strings;
+		return HttpWork.get(query);
 	}
 	
 	private String bts(boolean b){

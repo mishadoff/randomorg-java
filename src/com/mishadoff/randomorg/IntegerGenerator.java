@@ -1,6 +1,5 @@
 package com.mishadoff.randomorg;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -40,11 +39,10 @@ public class IntegerGenerator {
 						+ INT_NUM + count
 						+ INT_BASE + BASE
 						+ INT_COL + COLS;
-		BufferedReader br = HttpWork.get(query);
+		ArrayList<String> strings = HttpWork.get(query);
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
-		String line = "";
-		while ((line = br.readLine()) != null) {
-			numbers.add(Integer.parseInt(line, BASE));
+		for (String str : strings) {
+			numbers.add(Integer.parseInt(str, BASE));
 		}
 		return numbers;
 	}
