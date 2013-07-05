@@ -2,7 +2,6 @@ randomorg
 =========
 
 Random generator via atmospheric noise [Random.org](http://random.org)
-=========
 
 **Current version:** 0.1
 
