@@ -7,14 +7,14 @@ import com.mishadoff.randomorg.util.HttpWork;
 
 public class StringGenerator {
 	
-	private final String STRING_QUERY = "http://random.org/strings/?format=plain";
+	private final static String STRING_QUERY = "http://random.org/strings/?format=plain";
 	
-	private final String STR_NUM = "&num=";
-	private final String STR_LEN = "&len=";
-	private final String STR_DIGITS = "&digits=";
-	private final String STR_UPPER = "&upperalpha=";
-	private final String STR_LOWER = "&loweralpha=";
-	private final String STR_UNIQUE = "&unique=";
+	private final static String STR_NUM = "&num=";
+	private final static String STR_LEN = "&len=";
+	private final static String STR_DIGITS = "&digits=";
+	private final static String STR_UPPER = "&upperalpha=";
+	private final static String STR_LOWER = "&loweralpha=";
+	private final static String STR_UNIQUE = "&unique=";
 	
 	/**
 	 * Method generates <b>count</b> number of strings with length <b>len</b>.

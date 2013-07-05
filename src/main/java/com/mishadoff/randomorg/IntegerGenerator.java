@@ -14,15 +14,15 @@ import com.mishadoff.randomorg.util.HttpWork;
  */
 public class IntegerGenerator {
 	
-	private final String INTEGER_QUERY = "http://random.org/integers/?format=plain";
-	private final String INT_MIN = "&min=";
-	private final String INT_MAX = "&max=";
-	private final String INT_NUM = "&num=";
-	private final String INT_BASE = "&base=";
-	private final String INT_COL = "&col=";
+	private final static String INTEGER_QUERY = "http://random.org/integers/?format=plain";
+	private final static String INT_MIN = "&min=";
+	private final static String INT_MAX = "&max=";
+	private final static String INT_NUM = "&num=";
+	private final static String INT_BASE = "&base=";
+	private final static String INT_COL = "&col=";
 	
-	private final int BASE = 10;
-	private final int COLS = 1;
+	private final static int BASE = 10;
+	private final static int COLS = 1;
 	
 	/**
 	 * Generate <b>count</b> numbers between <b>min</b> and <b>max</b> inclusively.

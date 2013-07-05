@@ -13,8 +13,8 @@ import com.mishadoff.randomorg.util.HttpWork;
  */
 public class QuotaChecker {
 
-	private final String QUOTA_QUERY = "http://random.org/quota/?format=plain";
-	private final String QUOTA_QUERY_IP = "&ip=";
+	private final static String QUOTA_QUERY = "http://random.org/quota/?format=plain";
+	private final static String QUOTA_QUERY_IP = "&ip=";
 	
 	/**
 	 * Retrieves current remaining quota for requester IP

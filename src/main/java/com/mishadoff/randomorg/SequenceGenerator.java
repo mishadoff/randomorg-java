@@ -7,12 +7,12 @@ import com.mishadoff.randomorg.util.HttpWork;
 
 public class SequenceGenerator {
 
-	private final String SEQUENCE_QUERY = "http://random.org/sequences/?format=plain";
-	private final String SEQ_MIN = "&min=";
-	private final String SEQ_MAX = "&max=";
-	private final String SEQ_COL = "&col=";
+	private final static String SEQUENCE_QUERY = "http://random.org/sequences/?format=plain";
+	private final static String SEQ_MIN = "&min=";
+	private final static String SEQ_MAX = "&max=";
+	private final static String SEQ_COL = "&col=";
 	
-	private final int COLS = 1;
+	private final static int COLS = 1;
 	
 	/**
 	 * Generate sequence of dictinct numbers between <b>min</b> and <b>max</b>

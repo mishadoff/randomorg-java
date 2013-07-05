@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public final class HttpWork {
 	
-	private static final String GET = "GET";
+	private final static String GET = "GET";
 	
 	private HttpWork(){}
 	
