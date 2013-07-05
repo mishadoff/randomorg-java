@@ -1,8 +1,7 @@
 *.class
-
+.gradle
 # Package Files #
 *.jar
 *.war
 *.ear
 /build
-/src.client

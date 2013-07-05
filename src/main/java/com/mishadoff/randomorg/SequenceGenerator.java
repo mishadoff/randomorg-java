@@ -3,6 +3,8 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mishadoff.randomorg.util.HttpWork;
+
 public class SequenceGenerator {
 
 	private final String SEQUENCE_QUERY = "http://random.org/sequences/?format=plain";

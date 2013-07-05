@@ -1,7 +1,7 @@
 randomorg
 =========
 
-Random generator via athmospehric noise [Random.org](http://random.org)
+Random generator via atmospheric noise [Random.org](http://random.org)
 
 **Implementation**
 

@@ -3,6 +3,8 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mishadoff.randomorg.util.HttpWork;
+
 /**
  * Quota checker part of random.org API.
  * Provides methods for checking how many bits allowed for generation left.

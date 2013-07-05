@@ -3,6 +3,8 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mishadoff.randomorg.util.HttpWork;
+
 
 /**
  * Integer generator part of random.org API.

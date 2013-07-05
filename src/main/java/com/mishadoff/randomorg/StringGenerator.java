@@ -3,6 +3,8 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.mishadoff.randomorg.util.HttpWork;
+
 public class StringGenerator {
 	
 	private final String STRING_QUERY = "http://random.org/strings/?format=plain";
