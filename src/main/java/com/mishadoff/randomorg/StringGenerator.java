@@ -3,8 +3,15 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mishadoff.randomorg.util.HttpWork;
+import com.mishadoff.randomorg.util.HTTPUtils;
 
+/**
+ * String generator part of random.org API.
+ * Provides methods for generating random strings.
+ * 
+ * @author mishadoff
+ *
+ */
 public class StringGenerator {
 	
 	private final static String STRING_QUERY = "http://random.org/strings/?format=plain";
@@ -41,7 +48,7 @@ public class StringGenerator {
 				+ STR_UPPER + bts(withUpper)
 				+ STR_LOWER + bts(withLower)
 				+ STR_UNIQUE + bts(unique);
-		return HttpWork.get(query);
+		return HTTPUtils.get(query);
 	}
 	
 	private String bts(boolean b){

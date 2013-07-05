@@ -2,6 +2,9 @@ randomorg
 =========
 
 Random generator via atmospheric noise [Random.org](http://random.org)
+=========
+
+**Current version:** 0.1
 
 ### Getting started
 
@@ -39,7 +42,7 @@ qc.quota();
 
 ### Implementation
 
-All work with HTTP GET API happens in **HttpWork** util class. As we do not know
+All work with HTTP GET API happens in **HTTPUtils** util class. As we do not know
 return type for concrete GET-request yet we return `ArrayList<String>` which
 further can be processed by responsible methods.
 
@@ -49,4 +52,4 @@ handled on client side.
 
 ### Build
 
-randomorg build powereb by gradle. All you need is `gradle build`.
+`gradle build`

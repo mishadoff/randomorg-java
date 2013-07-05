@@ -3,11 +3,12 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mishadoff.randomorg.util.HttpWork;
+import com.mishadoff.randomorg.util.HTTPUtils;
 
 /**
  * Quota checker part of random.org API.
  * Provides methods for checking how many bits allowed for generation left.
+ * 
  * @author mishadoff
  *
  */
@@ -22,7 +23,7 @@ public class QuotaChecker {
 	 * @throws IOException 
 	 */
 	public long quota() throws IOException {
-		ArrayList<String> strings = HttpWork.get(QUOTA_QUERY);
+		ArrayList<String> strings = HTTPUtils.get(QUOTA_QUERY);
 		return Long.parseLong(strings.get(0));
 	}
 	
@@ -33,7 +34,7 @@ public class QuotaChecker {
 	 * @throws IOException 
 	 */
 	public long quota(String ip) throws IOException{
-		ArrayList<String> strings = HttpWork.get(QUOTA_QUERY + QUOTA_QUERY_IP + ip);
+		ArrayList<String> strings = HTTPUtils.get(QUOTA_QUERY + QUOTA_QUERY_IP + ip);
 		return Long.parseLong(strings.get(0));
 	}
 }

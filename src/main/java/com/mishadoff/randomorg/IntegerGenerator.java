@@ -3,12 +3,13 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mishadoff.randomorg.util.HttpWork;
+import com.mishadoff.randomorg.util.HTTPUtils;
 
 
 /**
  * Integer generator part of random.org API.
- * Provides methods for random integer number generating.
+ * Provides methods for random integer numbers generating.
+ * 
  * @author mishadoff
  *
  */
@@ -41,7 +42,7 @@ public class IntegerGenerator {
 						+ INT_NUM + count
 						+ INT_BASE + BASE
 						+ INT_COL + COLS;
-		ArrayList<String> strings = HttpWork.get(query);
+		ArrayList<String> strings = HTTPUtils.get(query);
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		for (String str : strings) {
 			numbers.add(Integer.parseInt(str, BASE));

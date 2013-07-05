@@ -14,11 +14,11 @@ import java.util.ArrayList;
  * @author mishadoff
  *
  */
-public final class HttpWork {
+public final class HTTPUtils {
 	
 	private final static String GET = "GET";
 	
-	private HttpWork(){}
+	private HTTPUtils(){}
 	
 	/**
 	 * Retrieves content on provided url.

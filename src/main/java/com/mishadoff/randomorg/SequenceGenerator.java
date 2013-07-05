@@ -3,8 +3,15 @@ package com.mishadoff.randomorg;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.mishadoff.randomorg.util.HttpWork;
+import com.mishadoff.randomorg.util.HTTPUtils;
 
+/**
+ * Sequence generator part of random.org API.
+ * Provides methods for generating all numbers in specified range but in random order
+ * 
+ * @author mishadoff
+ *
+ */
 public class SequenceGenerator {
 
 	private final static String SEQUENCE_QUERY = "http://random.org/sequences/?format=plain";
@@ -28,7 +35,7 @@ public class SequenceGenerator {
 				+ SEQ_MIN + min 
 				+ SEQ_MAX + max
 				+ SEQ_COL + COLS;
-		ArrayList<String> strings = HttpWork.get(query);
+		ArrayList<String> strings = HTTPUtils.get(query);
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 		for (String str : strings) {
 			numbers.add(Integer.parseInt(str));
