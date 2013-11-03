@@ -12,7 +12,7 @@ Random generator via atmospheric noise [Random.org](http://random.org)
 ``` java
 // generate two 6-side dice rolls
 IntegerGenerator ig = new IntegerGenerator();
-ig.generate(1,6,2)
+ArrayList<Integer> numbers = ig.generate(1,6,2)
 ```
 
 **Sequence Generator**
@@ -20,7 +20,7 @@ ig.generate(1,6,2)
 ``` java
 // shuffle 52-card deck
 SequenceGenerator sg = new SequenceGenerator();
-sg.generate(1, 52);
+ArrayList<Integer> numbers = sg.generate(1, 52);
 ```
 
 **String Generator**
@@ -28,7 +28,7 @@ sg.generate(1, 52);
 ``` java
 // new password alphanumeric 12 chars
 StringGenerator strg = new StringGenerator();
-strg.generate(12, 1, true, true, true, true);
+ArrayList<String> numbers = strg.generate(12, 1, true, true, true, true);
 ```
 
 **Quota Checker**
@@ -36,7 +36,7 @@ strg.generate(12, 1, true, true, true, true);
 ``` java
 // check your remaining quota
 QuotaChecker qc = new QuotaChecker();
-qc.quota();
+long quota = qc.quota();
 ```
 
 ### Implementation
@@ -45,7 +45,7 @@ All work with HTTP GET API happens in **HTTPUtils** util class. As we do not kno
 return type for concrete GET-request yet we return `ArrayList<String>` which
 further can be processed by responsible methods.
 
-All succesful request equal to server response code 200.
+All successful requests have response code 200.
 In case server returns 503 response code, IOException is thrown and should be
 handled on client side.
 

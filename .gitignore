@@ -5,3 +5,5 @@
 *.war
 *.ear
 /build
+/out
+/.idea

@@ -22,8 +22,8 @@ public final class HTTPUtils {
 	
 	/**
 	 * Retrieves content on provided url.
-	 * Recreates connection on eeach call.
-	 * @param url
+	 * Recreates connection on each call.
+	 * @param urlString
 	 * @return BufferedReader
 	 * @throws IOException 
 	 */
