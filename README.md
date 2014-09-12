@@ -52,3 +52,7 @@ handled on client side.
 ### Build
 
 `gradle build`
+
+### License
+
+[Eclipse Public License v1.0](https://www.eclipse.org/legal/epl-v10.html)
