@@ -1,6 +1,10 @@
 randomorg
 =========
 
+### DEPRECATED in favor of official library for new API 
+
+Official Library: https://github.com/RandomOrg/JSON-RPC-Java
+
 Random generator via atmospheric noise [Random.org](http://random.org)
 
 **Current version:** 0.1
